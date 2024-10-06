@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  &__panel {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 0;
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    &-navigation {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      & img {
+        cursor: pointer;
+      }
+    }
+  }
+  &__preview {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-bg {
+      background-color: #f8f3f4;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 24px;
+      color: #f16d7f;
+    }
+  }
+}
+
+.registration {
+  margin-top: 64px;
+  margin-bottom: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 128px;
+  &__form {
+    &-title {
+      font-weight: 300;
+      font-size: 16px;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    &-input {
+      display: flex;
+      flex-direction: column;
+      width: 347px;
+      height: 45px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      border: 1px solid #a4a4a4;
+      &::placeholder {
+        font-weight: 300;
+        font-size: 13px;
+        color: #b1b1b1;
+      }
+    }
+    &-radio {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      margin: 32px 0;
+      font-weight: 300;
+      font-size: 11px;
+      color: #000;
+      & p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    &-text {
+      font-weight: 300;
+      font-size: 13px;
+      color: #b1b1b1;
+      margin-bottom: 40px;
+      & span {
+        display: block;
+      }
+    }
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f16d7f;
+      color: #fff;
+      border: none;
+      gap: 20px;
+      width: 167px;
+      height: 50px;
+    }
+    &-button:active {
+      background-color: #fff;
+      color: #f16d7f;
+      border: 1px solid #f16d7f;
+      & svg path {
+        fill: #f16d7f;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      font-weight: 300;
+      font-size: 24px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+    &-text {
+      margin-bottom: 20px;
+    }
+    font-weight: 300;
+    font-size: 24px;
+    color: #000;
+    &-list {
+      padding-left: 30px;
+      font-weight: 300;
+      font-size: 24px;
+      color: #000;
+      &-object {
+        list-style-image: url(./Img/CheckMark.svg);
+        margin-bottom: 15px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.main__subscribe {
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-bg {
+    position: relative;
+    z-index: 1;
+    background-image: url("./Img/Title_background.png");
+    background-size: cover;
+    background-position: center;
+  }
+  &-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.7);
+    z-index: -1;
+  }
+  &-title {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    img {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      color: #222224;
+    }
+  }
+  &-form {
+    max-width: 475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    p {
+      font-weight: 400;
+      font-size: 24px;
+      color: #222224;
+      span {
+        font-weight: 700;
+        display: block;
+      }
+    }
+    form {
+      display: flex;
+      gap: 0px;
+      margin-top: 10px;
+      input {
+        background-color: #e1e1e1;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 10px;
+        border: 0;
+        width: 200px;
+      }
+      button {
+        padding: 10px 20px 10px 10px;
+        background-color: #f16d7f;
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+}
+
+.footer__fill {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-bg {
+    background-color: #222224;
+  }
+  &-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fbfbfb;
+  }
+  &-ico {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 736px;
+    margin: 0 auto;
+  }
+
+  .header__preview {
+    &-bg {
+        margin-bottom: 40px;
+    }
+  }
+
+  .registration {
+    gap: 22px;
+    &__text {
+      &-list {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .main__subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    margin-top: 96px;
+    &-title {
+      margin-top: 64px;
+      margin-bottom: 48px;
+    }
+    &-form {
+      margin-bottom: 140px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .header__panel {
+    &-navigation {
+      & a {
+        display: none;
+      }
+    }
+  }
+
+  .header__preview {
+    justify-content: center;
+  }
+
+  .registration {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+  }
+
+  .main__subscribe {
+    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    &-title {
+      margin-top: 64px;
+      margin-bottom: 48px;
+    }
+    &-form {
+      margin-bottom: 140px;
+    }
+  }
+
+  .main__feature {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    &-bg {
+      margin-top: 65px;
+    }
+    &-cart {
+      p {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
